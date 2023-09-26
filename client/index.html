@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Node.js on Azure Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-	<h1>Node.js and Express Hosted on Microsoft Azure Template</h1>
-	<p>This repository is a template that can be used to create a Node.js and Express website for hosting on Microsoft 
-	Azure.</p>
+<body onload="rollDice()">
+    <h1>Dice Game</h1>
+
+    <div class="instructions">
+        <p>Welcome to Dice-game</p>
+        <p><u>Instructions:</u></p>
+        <ol>
+            <li>Click "Roll" button to roll the dice.</li>
+            <li>Each player gets 3 rolls per turn.</li>
+            <li>Choose the category for your score after each roll.</li>
+            <li>The end goal is to maximize your score.</li>
+        </ol>
+    </div>
+    <button id="rollButton" onclick="rollDice()" autofocus>Roll</button>
+    <div class="scorecard">
+        <table>
+            <tr>
+                <th>Numbers</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td>Ones</td>
+                <td><input type="text" id="ones" readonly></td>
+            </tr>
+            <tr>
+                <td>Twos</td>
+                <td><input type="text" id="twos" readonly></td>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
